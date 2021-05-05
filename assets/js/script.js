@@ -20,7 +20,7 @@ const app = new Vue ({
       if(this.indexPhoto < 0)  this.indexPhoto = this.photos.length-1;
     }, 
     nextImg(){
-      this.indexPhoto++;
+      this.indexPhoto++;//incremento la variabile indice dell'array photos
       if(this.indexPhoto === this.photos.length)  this.indexPhoto = 0;
     }
   }

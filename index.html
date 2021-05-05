@@ -11,6 +11,7 @@
 </head>
 <body>
   <div id="app">
+    <h1>Carosello di immagini</h1>
     <div class="wrapper">
       <div class="prev">
         <i @click="prevImg"class="fas fa-arrow-left"></i>
@@ -25,8 +26,11 @@
       </div>
 
       <div class="carousel">
-        <i class="fas fa-circle"          
-        v-for="(circles, index) in photos"         
+        <!-- @click="indexPhoto = index" così quando clicco sul pallino lui mi rende l'index dell'immagina da mostrare uguale all'index del pallino che ho cliccato  -->
+        <!-- v-for="(photo, index) in photos"         
+        :class="(index === indexPhoto) ? 'active' : null" nel for metto  l'elemento photo e l'indice contenuti entrambi nell'array photos e cicla . in :class invece metto la condizione if dove confronto l'indice corrente del for con l'indice della photo e controllo che se l'indice della foto è dello stesso numero di quello dell'index del pallino allora aggiungo la classe activa al pallino in posizione index che è uguale all'index della photo aòtrimenti non fa nulla-->
+        <i @click="indexPhoto = index" class="fas fa-circle"  
+        v-for="(photo, index) in photos"         
         :class="(index === indexPhoto) ? 'active' : null" ></i>
       </div>
     </div>
