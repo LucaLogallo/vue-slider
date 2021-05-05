@@ -25,8 +25,9 @@
       </div>
 
       <div class="carousel">
-        <i v-for="{photo, index} in photos" :class = "(index === indexPhoto) ? 'active' : null"
-        class="fas fa-circle" ></i>
+        <i class="fas fa-circle"          
+        v-for="(circles, index) in photos"         
+        :class="(index === indexPhoto) ? 'active' : null" ></i>
       </div>
     </div>
 
